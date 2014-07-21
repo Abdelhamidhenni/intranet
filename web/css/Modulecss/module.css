@@ -1,0 +1,344 @@
+#moduleglob
+{
+	margin-top: 				-13px;
+}
+
+#massbut
+{
+	background-color: 			rgba(169,3,41,1);
+	border-radius: 				10px;
+	padding: 					8px;
+	color: 						white;
+	text-decoration: 			none;
+	transition:					background-color 0.6s;
+}
+
+#massbut:hover
+{
+	background-color: 			rgba(209,3,41,1);
+	padding: 					8px;
+	color: 						white;
+	text-decoration: 			none;
+	transition:					background-color 0.6s;
+}
+
+#massbut2
+{
+	float: 						right;
+	border-radius: 				10px;
+	margin-left: 				10px;
+	background-color: 			rgba(169,3,41,1);
+	padding: 					8px;
+	color: 						white;
+	text-decoration: 			none;
+	transition:					background-color 0.6s, color 0.6s;
+}
+
+#massbut2:hover
+{
+	float: 						right;
+	margin-left: 				10px;
+	background-color: 			rgba(209,3,41,1);
+	padding: 					8px;
+	color: 						white;
+	text-decoration: 			none;
+	transition:					background-color 0.6s, color 0.6s;
+}
+
+.allmodules a
+{
+	text-decoration: 			none;
+}
+
+.allmodules #infos_1
+{
+	text-align: 				center;
+}
+
+.module_link
+{
+	padding:					10px;
+	text-align: 				center;
+	text-decoration: 			none;
+	transition:					background-color 0.4s;
+	margin: 					auto;
+
+	color:						AntiqueWhite;
+	background-color: 			rgba(169,3,41,1);
+	margin-top: 				10px;
+	border-radius: 				10px;
+}
+
+.module_link:hover
+{
+	padding:					10px;
+	background-color: 			rgba(209,3,41,1);
+	text-align: 				center;
+	text-decoration: 			none;
+	transition:					background-color 0.4s;
+}
+
+#test
+{
+	text-decoration: 			none;
+}
+
+.addmod
+{
+	background-color: 			#442211;
+	color: 						Sienna;
+	padding: 					20px;
+	font-size: 					18px;
+	border-radius: 				12px;
+}
+
+.delmod
+{
+	background-color: 			#442211;
+	color: 						Sienna;
+	padding: 					20px;
+	border-radius: 				12px;
+	font-size: 					18px;
+}
+
+#futur_ticketbundle_ticket_user
+{
+	margin-bottom: 				10px;
+	font-size: 					18px;
+}
+
+#futur_ticketbundle_ticket_text
+{
+	width: 						550px;
+	height: 					90px;
+	font-size: 					18px;
+}
+
+#futur_modulebundle_module_name
+{
+	margin-left: 				50px;
+}
+
+#futur_modulebundle_module_credits
+{
+	margin-left: 				40px;
+}
+
+#futur_modulebundle_module_description
+{
+	margin-left: 				10px;
+	margin-top: 				10px;
+	width: 						400px;
+	height: 					90px;
+}
+
+#futur_modulebundle_module_skills
+{
+	margin-left: 				50px;
+	width: 						400px;
+}
+
+.module_line
+{
+	color:						AntiqueWhite;
+	background-color: 			rgba(169,3,41,1);
+	text-decoration: 			none;
+	padding: 					10px;
+	font-size: 					18px;
+	margin: 					0px 0px 10px 0px;
+	transition:					padding 0.6s, background-color 0.6s;
+	border-radius: 				10px;
+	text-decoration: 			none;
+}
+
+.module_line:hover
+{
+	background-color: 			rgba(209,3,41,1);
+	text-decoration: 			none;
+	transition:					padding 0.6s, background-color 0.6s;
+}
+
+.module_line:hover > a
+{
+	text-decoration: 			none;
+}
+
+hr
+{
+	display: 					block;
+	height: 					1px;
+    border: 					0;
+    border-top: 				1px solid black;
+    margin: 					1em 0;
+    padding: 					0;
+}
+
+#moduledesc:hover a
+{
+	text-decoration: 			none;
+}
+
+.fullmodule
+{
+	background-color: 			rgba(169,3,41,1);
+	color: 						Antiquewhite;
+	font-size: 					16px;
+	padding: 					15px;
+	margin: 					20px 0px 10px 0px;
+	border-radius: 				10px;
+
+}
+
+.fullmodule h2
+{
+	margin-top: 				0px;
+	background-color: 			rgba(109,3,41,1);
+	padding: 					5px;
+	padding-left: 				10px;
+	border-radius: 				10px;
+}
+
+.mod_desc
+{
+  	background-color: 			white;
+  	font-size: 					16px;
+  	color: 						#333;
+	padding: 					10px;
+	border-radius: 				10px;
+}
+
+.moduledesc
+{
+	text-decoration: 			none;
+}
+
+.addmod .btn
+{
+	background-color: 			DarkSalmon;
+	border: 					none;
+	transition:					background-color 0.6s;
+}
+
+.addmod .btn:hover
+{
+	background-color: 			Salmon;
+	border: 					none;
+	transition:					background-color 0.6s;
+}
+
+.activities
+{
+	background-color: 			rgba(169,3,41,1);
+	margin: 					20px 0px 0px 0px;
+	padding: 					20px;
+	border-radius: 				10px;
+}
+
+.activities ul
+{
+	color: 						AntiqueWhite;
+	font-size: 					20px;
+	padding-left: 				0;
+}
+
+.activities ul li
+{
+	color: 						#442211;
+	font-size: 					20px;
+	padding-left: 				0;
+}
+
+.activities ul li a
+{
+	text-decoration: 			none;
+}
+
+.righteous
+{
+	height: 					40px;
+	width: 						40px;
+	font-size: 					30px;
+	background-color: 			rgba(109,3,41,1);
+	color: 						AntiqueWhite;
+	border-radius: 				10px;
+	text-align: 				center;
+	float: 						right;
+	text-decoration: 			none;
+	margin-top: 				-8px;
+	transition:					color 0.6s, background-color 0.6s;
+}
+
+.righteous:hover
+{
+	background-color: 			rgba(209,3,41,1);
+	color: 						AntiqueWhite;
+	text-decoration: 			none;
+	transition:					color 0.6s, background-color 0.6s;
+}
+
+.fullmodule input
+{
+	background-color: 			rgba(209,3,41,1);
+	border: 					none;
+	padding: 					5px;
+	border-radius: 				6px;
+	transition:					background-color 0.6s;
+}
+
+.fullmodule input:hover
+{
+	background-color: 			rgba(239,3,41,1);
+	transition:					background-color 0.6s;
+}
+
+.activite_line
+{
+	margin: 					12px 0px 0px 0px;
+	padding: 					7px;
+	color: 						AntiqueWhite;
+	border-radius: 				10px;
+	transition:					background-color 0.5s, color 0.6s;
+	background-color: 			rgba(79,3,41,1);
+}
+
+.activite_line:hover
+{
+	background-color: 			rgba(109,3,41,1);
+	color: 						AntiqueWhite;
+	padding: 					7px;
+	transition:					background-color 0.5s, color 0.6s;
+}
+
+.activite_line2
+{
+	margin: 					12px 0px 0px 0px;
+	padding: 					7px;
+	color: 						AntiqueWhite;
+	border-radius: 				10px;
+	transition:					background-color 0.5s, color 0.6s;
+	background-color: 			red;
+}
+
+.activite_line2:hover
+{
+	background-color: 			white;
+	color: 						red;
+	padding: 					7px;
+	transition:					background-color 0.5s, color 0.6s;
+}
+
+.fullmodule button
+{
+	color: 						AntiqueWhite;
+	background-color: 			rgba(209,3,41,1);
+	border:						none;
+	border-radius: 				6px;
+	padding: 					6px;
+	transition:					background-color 0.6s;
+}
+
+.fullmodule button:hover
+{
+	background-color: 			rgba(249,3,41,1);
+	transition:					background-color 0.6s;
+}

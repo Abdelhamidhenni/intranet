@@ -1,0 +1,12 @@
+{% if ticket.vu == false %}
+	<div id="elem" style="background-color:#A9BCF5;">
+{% elseif ticket.repondu == false %}
+	<div id="elem" style="background-color:#CEECF5;">
+{% elseif ticket.repondu == true %}
+	<div id="elem" style="background-color:white;">
+{% endif %}
+<div id="nom"><a href="{{ path('admin_ticket', {'id' : ticket.id }) }}"></a>{{ ticket.id }}</div>
+<div id="date"><a href="{{ path('admin_ticket', {'id' : ticket.id }) }}">{{ ticket.date | date("m/d/Y") }}</a></div>
+<div id="titre"><a href="{{ path('admin_ticket', {'id' : ticket.id }) }}">{{ ticket.titre }}</a></div>
+<div id="repondre">{{ ticket.assignation }}</div>
+</div>

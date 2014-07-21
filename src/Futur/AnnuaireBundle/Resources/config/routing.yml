@@ -1,0 +1,15 @@
+futur_annuaire_homepage:
+    pattern:  /{_locale}
+    defaults: { _controller: FuturAnnuaireBundle:Annuaire:index, filter: 'a*' }
+
+futur_annuaire_search_by_uid:
+    pattern:  /{_locale}/search/uid/{filter}
+    defaults: { _controller: FuturAnnuaireBundle:Annuaire:index }
+
+futur_annuaire_search_by_firstName:
+    pattern:  /{_locale}/search/first_name/{firstName}
+    defaults: { _controller: FuturAnnuaireBundle:Annuaire:index }
+
+futur_annuaire_search_by_lastName:
+    pattern:  /{_locale}/search/last_name/{lastName}
+    defaults: { _controller: FuturAnnuaireBundle:Annuaire:index }

@@ -1,0 +1,78 @@
+header
+{
+  border-bottom:        1px solid grey;
+  height:               100px;
+  min-width: 			1200px;
+  margin: 				auto;
+}
+
+#hud
+{
+	font-size: 			15px;
+	padding-top:		5px;
+	margin-left:		250px;
+}
+
+#hud img
+{
+	height:				20px;
+	margin-left:		250px;
+}
+
+#frflag
+{
+	top:				5px;
+	width: 				50px;
+}
+
+#enflag
+{
+	top:				5px;
+}
+
+#titre h1
+{
+	top:				10px;
+	left:				10px;
+	margin-left:		310px;
+}
+
+#logo img
+{
+	border:				0px;
+	top:				0px;
+	height:				100px;
+	float: 				right;
+	margin-top: 		-80px;
+	margin-right: 		10px;
+	margin-left: 		20px;
+}
+
+#user
+{
+	margin-left:		200px;
+	margin-top: 		-50px;
+	border:				1px solid red;
+	color: 				red;
+}
+
+#user:hover
+{
+	color: 				red;
+}
+
+#user a
+{
+	text-decoration: 	none;
+	color: 				red;
+}
+
+
+#language
+{
+	list-style-type: 	none;
+	float: 				right;
+	margin-right: 		60px;
+	margin-top: 		-80px;
+	margin-right: 		-10px;
+}

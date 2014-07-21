@@ -1,0 +1,27 @@
+futur_module_homepage:
+    pattern:  /modules/{_locale}
+    defaults: { _controller: FuturModuleBundle:Module:index }
+
+futur_module_add:
+    pattern:  /addmodule/{_locale}
+    defaults: { _controller: FuturModuleBundle:Module:add }
+
+futur_module_infos:
+    pattern:  /module/{id}/{_locale}
+    defaults: { _controller: FuturModuleBundle:Module:voir }
+
+futur_module_modifier:
+    pattern:   /modulemod/{id}
+    defaults:  { _controller: FuturModuleBundle:Module:modifier }
+    requirements:
+        id:  \d+
+
+futur_module_supprimer:
+    pattern:   /modulesup/{id}
+    defaults:  { _controller: FuturModuleBundle:Module:supprimer }
+    requirements:
+        id:  \d+
+
+futur_activite_add:
+    resource: "@FuturSujetBundle/Resources/config/routing.yml"
+    prefix:   /

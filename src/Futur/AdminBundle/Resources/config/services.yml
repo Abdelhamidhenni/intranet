@@ -1,0 +1,7 @@
+parameters:
+#    Futur_admin.example.class: Futur\AdminBundle\Example
+
+services:
+#    Futur_admin.example:
+#        class: %Futur_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

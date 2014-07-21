@@ -1,0 +1,116 @@
+header
+{
+  	height:               	120px;
+  	margin: 				auto;
+  	margin-top: 			-20px;
+  	margin-left: 			-2px;
+  	padding-top: 			20px;
+  	font-family: 			Indie Flower;
+	background-color: 		#442211;
+	color: 					Sienna;
+	text-align: 			left;
+}
+
+.full_user
+{
+	background-color: 		red;
+}
+
+#hud
+{
+	font-size: 				15px;
+	padding-top:			5px;
+	margin-left:			250px;
+}
+
+.yolo
+{
+	margin-left: 			10px;
+	position: 				relative;
+	width: 					100px;
+	height: 				100px;
+	background-color: 		red;
+	border: 				2px solid #442211;
+}
+
+#titre
+{
+	margin-left: 			270px;
+	width: 					200px;
+}
+
+#titre h1
+{
+	top:					10px;
+	left:					10px;
+	font-size: 				60px;
+}
+
+#titre a
+{
+	color: 					Sienna;
+	transition:				color 0.5s, text-decoration 0.5s, text-shadow 0.5s;
+}
+
+#titre a:hover
+{
+	color: 					white;
+	text-decoration: 		none;
+	transition:				color 0.5s, text-decoration 0.5s, text-shadow 0.5s;
+}
+
+#logo img
+{
+	border:					0px;
+	top:					0px;
+	height:					100px;
+	float: 					right;
+	margin-right: 			10px;
+	margin-left: 			20px;
+}
+
+#user
+{
+	margin-top: 			-148px;
+	font-size: 				18px;
+	text-align: 			right;
+	margin-right: 			27px;
+	color: 					AntiqueWhite;
+}
+
+#user a
+{
+	color: 					rgba(169,3,41,1);
+	transition:				color 0.6s;
+}
+
+#user a:hover
+{
+	color: 					rgba(239,3,41,1);
+	transition:				color 0.6s;
+	text-decoration: 		none;
+}
+
+#user .yolo
+{
+	background-color: 		#991111;
+	padding: 				5px;
+	text-decoration: 		none;
+	font-size: 				20px;
+	color: 					AntiqueWhite;
+	border-radius: 			8px;
+	transition:				color 0.5s, background-color 0.5s;
+	margin-top: 			-100px;
+	margin-right: 			-17px;
+	vertical-align: 		middle;
+	line-height: 			80px;
+	margin-left: 			15px;
+}
+
+#user .yolo:hover
+{
+	text-decoration: 		none;
+	background-color: 		#dd3333;
+	color: 					AntiqueWhite;
+	transition:				color 0.5s, background-color 0.5s;
+}

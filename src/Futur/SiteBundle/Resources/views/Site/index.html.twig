@@ -1,0 +1,37 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+<div class="left_index">
+
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+	<div class="current_act">
+
+	{% for activite in activites %}
+
+		<p>
+		- {% trans %}Le projet{% endtrans %} <a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;"> {{ activite.name }} </a> {% trans %}est en cours{% endtrans %} ! {% trans %}Faites votre rendu avant le{% endtrans %} {{ activite.datefin |date('Y-m-d') }}.
+		</p>
+	{% else %}
+		<div id="infos_1">{% trans %}Pas de projets en cours{% endtrans %} !</div>
+	{% endfor %}
+
+	</div>
+
+{% else %}
+
+<div class="current_act">
+
+	{% trans %}Connecte toi pour voir les activités en cours{% endtrans %} !
+
+	</div>
+
+{% endif %}
+
+</div>
+
+
+
+
+{% endblock %}

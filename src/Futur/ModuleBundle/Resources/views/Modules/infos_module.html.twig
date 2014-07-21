@@ -1,0 +1,95 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+<div id="moduleglob">
+	<div id="leftArt2">
+
+	<br/>
+	<a id="massbut" href="{{ path('futur_module_homepage') }}">Retour au menu</a>
+	</div>
+	<div id="rightArt2">
+
+		{% include "FuturModuleBundle:Modules:module_full.html.twig" %}
+
+		<div id="choices">
+
+		{% if is_granted("ROLE_ADMIN") %}
+
+
+			<a id="massbut2" href="{{ path('futur_module_supprimer', {'id': module.id}) }}">{% trans %}Supprimer ce module{% endtrans %}</a>
+
+			<a id="massbut2" href="{{ path('futur_module_modifier', {'id': module.id}) }}">{% trans %}Modifier ce module{% endtrans %}</a>
+
+
+		{% endif %}
+		</div>
+
+	</div>
+
+
+</div>
+<br/>
+<br/>
+<hr/>
+
+<div class="activities">
+<ul> {% trans %}Liste des activités pour ce module{% endtrans %} :
+
+
+
+{% if is_granted("ROLE_ADMIN") %}
+<a class="righteous" href="{{ path('futur_activite_add', {'id': module.id}) }}"> + </a>
+{% endif %}
+<hr/>
+	{% if is_granted("ROLE_ADMIN") %}
+
+	{% for activite in activites %}
+
+		{% if activite.module == module.name %}
+
+			{% if activite in user.activites %}
+
+				<li><a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2': activite.module}) }}" style="text-decoration:none;">
+				<div class="activite_line">
+					{% include "FuturSujetBundle:Activites:activite.html.twig" %}
+				</div>
+				</a></li>
+
+			{% else %}
+
+				<li><a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;">
+				<div class="activite_line2">
+					{% include "FuturSujetBundle:Activites:activite.html.twig" %} -> Vous n'êtes pas inscrit !
+				</div>
+				</a></li>
+
+			{% endif %}
+		{% endif %}
+		{% else %}
+			<div id="infos_1">{% trans %}Pas d'activité' pour l'instant {% endtrans %}</div>
+	{% endfor %}
+	</div>
+
+	{% else %}
+
+	{% for activite in activites %}
+
+		{% if activite.module == module.name %}
+
+		<li><a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;">
+		<div class="activite_line">
+			{% include "FuturSujetBundle:Activites:activite.html.twig" %}
+		</div>
+		</a></li>
+
+		{% endif %}
+	{% endfor %}
+
+		{% endif %}
+
+</ul>
+
+</div>
+
+{% endblock main %}

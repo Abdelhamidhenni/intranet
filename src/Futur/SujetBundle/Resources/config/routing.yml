@@ -1,0 +1,23 @@
+futur_activite_homepage:
+    pattern:  /activites/{_locale}
+    defaults: { _controller: FuturSujetBundle:Activite:index }
+
+futur_activite_add:
+    pattern:  /addactivite/{_locale}
+    defaults: { _controller: FuturSujetBundle:Activite:add }
+
+futur_activite_infos:
+    pattern:  /module/{id2}/activite/{id}/{_locale}
+    defaults: { _controller: FuturSujetBundle:Activite:voir }
+
+futur_activite_modifier:
+    pattern:   /module/{id2}/activitemod/{id}
+    defaults:  { _controller: FuturSujetBundle:Activite:modifier, id2: 0 }
+    requirements:
+        id:  \d+
+
+futur_activite_supprimer:
+    pattern:   /module/{id2}/activitesup/{id}
+    defaults:  { _controller: FuturSujetBundle:Activite:supprimer, id2: 0 }
+    requirements:
+        id:  \d+

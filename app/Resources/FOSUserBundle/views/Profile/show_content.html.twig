@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<div class="userglob">
+	<div class="userprof">
+
+
+		<p><img src="data:image/png;base64,{{ user.picture }}" style="height: 200px; float: left; border: 1px solid black; margin: 0px 15px" /></p>
+	    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+	    <p>{{ 'profile.show.first_name'|trans }}: {{ user.firstName }}</p>
+	    <p>{{ 'profile.show.last_name'|trans }}: {{ user.lastName }}</p>
+	    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+	    <p>{{ 'profile.show.mobile_phone'|trans }}: {{ user.mobilePhone }}</p>
+
+	</div>
+	<h1>{{ 'profile.activity.title'|trans }}</h1>
+	<div class="usermods">
+
+		{% for activite in user.activites %}
+
+		<a href="{{ path('futur_activite_infos', {'id': activite.id}) }}" style="text-decoration:none;">
+			<div class="activite_line">
+				{% include "FuturSujetBundle:Activites:activite.html.twig" %}
+			</div>
+			</a>
+			{% else %}
+				<div id="infos_1">{{ 'profile.activity.no_activity'|trans }}</div>
+
+		{% endfor %}
+
+	</div>
+	<h1>{{ 'profile.mark.title'|trans }}</h1>
+	<div class="usermods">
+		<p>{{ 'profile.mark.actual'|trans }} : {{ user.note }}/20</p>
+	</div>
+</div>
+

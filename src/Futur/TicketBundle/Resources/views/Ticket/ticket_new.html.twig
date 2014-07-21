@@ -1,0 +1,16 @@
+{% extends "FuturTicketBundle::layout.html.twig" %}
+{% block main %}
+<div class="newticket">
+	<form method="POST" {{ form_enctype(form) }} >
+		{% trans %}Titre{% endtrans %}
+		{{ form_widget(form.titre, {'attr' : {'class' : 'input1'}}) }}
+		<br/>
+		{% trans %}Problème{% endtrans %}
+		{{ form_widget(form.probleme, {'attr' : {'class' : 'input2'}})}}
+		{{form_rest(form)}}
+		<br/>
+		<br/>
+		<button type="submit" class="b4 b55">{% trans %} Envoyer {% endtrans %}</button>
+	</form>
+</div>
+{% endblock main %}

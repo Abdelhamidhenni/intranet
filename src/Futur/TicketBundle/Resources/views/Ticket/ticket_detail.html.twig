@@ -1,0 +1,33 @@
+<div id="detail">
+{% if id.statut == true %}
+	<div id="detailrep1"> id : {{ id.id }} </div>
+	<div id="detailrep2"> date : {{ id.date | date("d/m/Y")}}</div>
+	<div id="detailrep1"> {% trans %} Titre {% endtrans %} : {{ id.titre }} </div>
+	<div id="detailrep3"> {% trans %} Problème {% endtrans %} : {{ id.probleme }} </div>
+{% endif %}
+{% if id.repondu == 1 and id.assignation != NULL %}
+		<div id="detailrep1"> {{ id.assignation }}{% trans %}vous a répondu{% endtrans %}!</div>
+{% endif %}
+{% if id.repondu == 1 %}
+	<div id="detailrep3">{% trans %}Réponse{% endtrans %}: {{ id.reponse }}</div>
+{% endif %}
+<div id="detailrep4">
+action :
+	{% if id.statut == true %}
+		<a href=" {{ path('ticket_del', { 'ticket': id.id }) }} ">
+			<div class="btn btn-default boutton">{% trans %}Supprimer le ticket{% endtrans %}</div>
+		</a>
+		<a href=" {{ path('ticket_update', { 'ticket' : id.id }) }} ">
+			<div class="btn btn-default boutton1">{% trans %}Modifier le ticket{% endtrans %}</div>
+		</a>
+	{% endif %}
+	<a href=" {{ path('ticket_statut', {'ticket' : id.id }) }} ">
+		{% if id.statut == true %}
+			<div class="btn btn-default boutton2">{% trans %}Clore le ticket{% endtrans %}</div>
+		{% else %}
+			<div class="btn btn-default boutton2">{% trans %}Rouvrir le ticket{% endtrans %}</div>
+		{% endif %}
+	</a>
+
+
+</div>

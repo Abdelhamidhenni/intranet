@@ -1,0 +1,6 @@
+<div id="elem">
+		<div id="nom"> {{ module.datestart | date('d/m/Y') }} </div>
+		<div id="date"> {{ module.name }}  </div>
+		<a href="{{ path('futur_module_modifier', { id : module.id }) }}"><div id="titre"> modifier </div></a>
+		<a href="{{ path('futur_module_supprimer', { id : module.id }) }}"><div id="repondre"> supprimer  </div></a>
+</div>

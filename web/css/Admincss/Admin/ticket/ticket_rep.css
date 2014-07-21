@@ -1,0 +1,193 @@
+#reponse
+{
+	position: 			absolute;
+	border-top:			1px solid grey;
+	left:				-1px;
+	height: 			701px;
+	width: 				1194px;
+	top:				550px;
+	background-color: 	white;
+	overflow-y: 		auto;
+	overflow-x: 		hidden;
+}
+
+#idrep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	background-color:	#EBEBEB;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#daterep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	background-color:	#EBEBEB;
+	width: 				1194px;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#nomrep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#telephonerep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#emailrep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	background-color:	#EBEBEB;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#telephonerep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#assignationrep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#titrerep
+{
+	border-bottom: 		1px solid grey;
+	height: 			50px;
+	width: 				1194px;
+	background-color:	#EBEBEB;
+	vertical-align: 	middle;
+	line-height: 		50px;
+	padding-left: 		20px;
+}
+
+#problemerep
+{
+	border-bottom: 		1px solid grey;
+	width: 				1194px;
+	padding-left: 		20px;
+	padding-top: 		15px;
+	padding-bottom: 	15px;
+	max-height: 		300px;
+}
+
+#assignation
+{
+	width:				300px;
+	margin-left: 		30px;
+	height: 			30px;
+	vertical-align: 	middle;
+	line-height: 		0px;
+}
+
+#qwerty
+{
+	width: 				1194px;
+	min-height: 		300px;
+}
+
+.loulz input
+{
+	height: 			100px;
+	margin-left: 		20px;
+}
+
+#assignationrep form label
+{
+	visibility: 		hidden;
+}
+
+.sup
+{
+	margin-top: 		20px;
+	margin-left: 		20px;
+	width: 				1150px;
+	height: 			250px;
+}
+
+.b4
+{
+	position: 			absolute;
+	top:				163px;
+	left: 				320px;
+ 	height: 			30px;
+ 	margin-left: 		20px;
+ 	vertical-align: 	middle;
+ 	line-height: 		0px;
+}
+
+.b5
+{
+	position: 			relative;
+	width: 				200px;
+	left:				100px;
+	margin:		 		20px;
+}
+
+.b6
+{
+	position: 			relative;
+	width: 				200px;
+	left:				600px;
+	margin:		 		20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

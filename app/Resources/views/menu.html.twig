@@ -1,0 +1,39 @@
+
+
+<div id="menu">
+
+	<div id="language2">
+	<ul> {% trans %}Langue{% endtrans %}
+
+		{% for locale in ['en', 'fr'] %}
+
+	        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale' : locale})) }}"><li>{{ locale }}</li>
+	        </a>
+
+		{% endfor %}
+
+	</ul>
+
+</div>
+
+<div id="fullmenu">
+
+	<ul>
+		<a href="{{ path('futursite_homepage') }}"><li>{% trans %}Accueil{% endtrans %}</li></a>
+		<a href="{{ path('fos_user_profile_show') }}"><li>{% trans %}Profil{% endtrans %}</li></a>
+		<a href="{{ path('ticket_homepage') }}"><li>{% trans %}Ticket{% endtrans %}</li></a>
+
+		<a href="{{ path('futur_annuaire_homepage') }}"><li>{% trans %}Annuaire{% endtrans %}</li></a>
+		<br/>
+		<br/>
+		<a href="{{ path('futur_module_homepage') }}"><li>{% trans %}Modules{% endtrans %}</li></a>
+		<a href="{{ path('futur_cours_homepage') }}"><li>{% trans %}Cours{% endtrans %}</li></a>
+		<a href="{{ path('ccdn_homepage') }}"><li>{% trans %}Forum{% endtrans %}</li></a>
+		<a href="{{ path('futur_planning_homepage') }}"><li>{% trans %}Planning{% endtrans %}</li></a>
+	</ul>
+
+</div>
+
+</div>
+
+

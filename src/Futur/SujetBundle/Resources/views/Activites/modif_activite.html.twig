@@ -1,0 +1,23 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier un module - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div class="addmod">
+
+  <h2>{% trans %}Modifier cette activité{% endtrans %}</h2>
+  <br/>
+  <form method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form, { 'attr': {'class': 'c4'} }) }}
+
+        <input type="submit" class="btn btn-primary" />
+  </form>
+
+</div>
+
+
+
+{% endblock %}

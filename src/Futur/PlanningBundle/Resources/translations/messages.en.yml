@@ -1,0 +1,8 @@
+# Planning
+planning:
+    title: Schedule
+    events: Events on week
+    event:
+        start: Start on/Started since
+        end: Until/Since
+        description: Information about the event

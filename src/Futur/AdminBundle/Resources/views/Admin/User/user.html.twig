@@ -1,0 +1,20 @@
+{% extends "FuturAdminBundle::layout.html.twig" %}
+
+{% block where %}
+
+	User
+
+{% endblock where %}
+
+{% block mainadmin %}
+	<div id="affichage">
+		{% for user in user %}
+        	{% include "FuturAdminBundle:Admin/user:user_elem.html.twig" %}
+    	{% endfor %}
+    </div>
+   		{% for user in user %}
+   			{% if user.id == id %}
+          {% include "FuturAdminBundle:Admin/user:user_detail.html.twig" %}
+   			{% endif %}
+   		{% endfor %}
+{% endblock mainadmin %}

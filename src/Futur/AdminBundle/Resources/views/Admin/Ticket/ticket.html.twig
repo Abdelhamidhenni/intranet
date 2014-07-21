@@ -1,0 +1,22 @@
+{% extends "FuturAdminBundle::layout.html.twig" %}
+
+{% block where %}
+
+	ticket
+
+{% endblock where %}
+
+{% block mainadmin %}
+	<div id="affichage">
+		{% for ticket in ticket %}
+      {% if ticket.resolu == 0 and ticket.statut == true %}
+        	{% include "FuturAdminBundle:Admin/ticket:ticket_elem.html.twig" %}
+      {% endif %}
+    {% endfor %}
+    </div>
+   		{% for ticket in ticket %}
+   			{% if ticket.id == id %}
+          {% include "FuturAdminBundle:Admin/ticket:ticket_detail.html.twig" %}
+   			{% endif %}
+   		{% endfor %}
+{% endblock mainadmin %}

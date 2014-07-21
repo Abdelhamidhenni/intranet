@@ -1,0 +1,46 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+
+<div class="paper">
+
+<div class="framen"> {% trans %} Cours {%endtrans%} </div>
+
+<hr />
+
+{% for module in modules %}
+<p> {% trans %}Cliquez sur une activité pour accéder a son cours{%endtrans%}.</p>
+
+<ul><h3>Module {{module.name}} :</h3>
+
+
+	{% for activite in activites %}
+
+
+		{% if activite.module == module.name %}
+	<li>
+		- <a href="{{ path('futur_cours_infos', {'id': activite.id}) }}" style="text-decoration:none;">
+					{{activite.name}}
+		</a>
+	</li>
+	{% endif %}
+
+{% else %}
+
+{% trans %}Pas d'activité' pour l'instant {% endtrans %}
+
+{% endfor %}
+
+</ul>
+{% else %}
+
+<div class="framen">{% trans %}Pas de cours pour l'instant {% endtrans %} :(</div>
+
+
+{% endfor %}
+
+
+</div>
+
+{% endblock %}

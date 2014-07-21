@@ -1,0 +1,49 @@
+security:
+    encoders:
+        Futur\UserBundle\Entity\User: sha512
+        Symfony\Component\Security\Core\User\User: plaintext
+        "FOS\UserBundle\Model\UserInterface": sha512
+
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_USER]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        chain_provider:
+            chain :
+                providers: [fos_userbundle, fr3d_ldapbundle]
+        main:
+            id: fos_user.user_provider.username
+        fr3d_ldapbundle:
+            id: fr3d_ldap.security.user.provider
+        fos_userbundle:
+            id: fos_user.user_manager
+
+    firewalls:
+
+        main:
+            pattern:        ^/
+            anonymous:      ~
+            fr3d_ldap: ~
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: form.csrf_provider
+                always_use_default_target_path: true
+                default_target_path: /fr
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+            logout:
+                path:       fos_user_security_logout
+                target:     /fr
+            remember_me:
+                key:        %secret% # %secret% est un paramètre de parameters.yml
+
+    access_control:
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/ticket, roles: ROLE_USER }
+        - { path: ^/modules, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/planning, roles: ROLE_USER }
+        - { path: ^/annuaire, roles: ROLE_USER }
+        - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/forumName, roles: ROLE_USER }

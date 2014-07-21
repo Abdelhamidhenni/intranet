@@ -1,0 +1,131 @@
+{% extends "FuturAnnuaireBundle::layout.html.twig" %}
+{% block main %}
+
+	{% block mainannuaire %}
+<style type="text/css">
+section#annuaire {
+	padding-bottom: 100px;
+}
+
+section#annuaire article
+{
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 50px;
+	font-family: calibri;
+	text-align: left;
+}
+
+section#annuaire p {
+	text-align: left;
+}
+
+section#annuaire article img
+{
+	max-height: 100px;
+}
+
+.detuser
+{
+	background-color: 	rgba(169,3,41,1);
+	font-family: 		indie Flower;
+	color:				Antiquewhite;
+	width: 				210px;
+	padding: 			10px;
+	border-radius: 		10px;
+	text-align: 		center;
+	display: 			inline-block;
+	margin: 			10px;
+	box-shadow: 		5px 5px 5px #aaa;
+}
+
+section#annuaire table.menu_horizontal {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Calibri', serif, sans-serif;
+}
+
+section#annuaire table.menu_horizontal th {
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+
+section#annuaire table.menu_horizontal td {
+	padding: 5px;
+}
+
+section#annuaire table.menu_horizontal td a {
+	color: dodgerblue;
+}
+
+section#annuaire table.menu_horizontal td.search_form {
+	text-align: left;
+}
+</style>
+
+<h3>{{ 'yearbook.title'|trans }}</h3>
+
+<section id="annuaire">
+
+<table class="menu_horizontal">
+<tr>
+	<th colspan="26">{{ 'yearbook.search.uid'|trans }}</th>
+</tr>
+<tr>
+{% for letter in 'A'..'Z' %}
+	<td><a href="{{ path('futur_annuaire_search_by_uid', {'filter': letter|lower}) }}*">{{ letter }}</a></td>
+{% endfor %}
+</tr>
+</table>
+
+<table class="menu_horizontal">
+<tr>
+	<th colspan="26">{{ 'yearbook.search.first_name'|trans }}</th>
+</tr>
+<tr>
+{% for letter in 'A'..'Z' %}
+	<td><a href="{{ path('futur_annuaire_search_by_firstName', {'firstName': letter|lower}) }}*">{{ letter }}</a></td>
+{% endfor %}
+</tr>
+</table>
+
+<table class="menu_horizontal">
+<tr>
+	<th colspan="26">{{ 'yearbook.search.last_name'|trans }}</th>
+</tr>
+<tr>
+{% for letter in 'A'..'Z' %}
+	<td><a href="{{ path('futur_annuaire_search_by_lastName', {'lastName': letter|lower}) }}*">{{ letter }}</a></td>
+{% endfor %}
+</tr>
+</table>
+
+	{% for items in result %}
+	<div class="detuser">
+
+		<article>
+		{% if items.picture is defined %}
+			<img src="data:image/png;base64,{{ items.picture[0] }}" /><br />
+		{% endif %}
+		<p>
+			<strong>{{ 'yearbook.data.uid'|trans }}</strong>: {{ items.uid[0] }}<br />
+			<strong>{{ 'yearbook.data.first_name'|trans }}</strong>: {{ items.firstName[0] }}<br />
+			<strong>{{ 'yearbook.data.last_name'|trans }}</strong>: {{ items.lastName[0] }}<br />
+			<strong>{{ 'yearbook.data.email'|trans }}</strong>:<br />
+			{{ items.alias[0] }}<br />
+			{% if items.mobilePhone is defined %}
+				<strong>{{ 'yearbook.data.mobile_phone'|trans }}</strong>: {{ items.mobilePhone[0] }}<br />
+			{% endif %}
+		</p>
+		</article>
+
+	</div>
+
+	{% endfor %}
+</section>
+	{% endblock mainannuaire %}
+
+
+{% endblock %}

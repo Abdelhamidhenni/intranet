@@ -1,0 +1,7 @@
+
+<div id="elem">
+		<div id="nom"> {{ activite.datedebut | date('d/m/Y') }} </div>
+		<div id="date"> {{ activite.description }}  </div>
+		<a href="{{ path('futur_activite_modifier', { id : activite.id }) }}"><div id="titre"> modifier </div></a>
+		<a href="{{ path('futur_activite_supprimer', { id : activite.id }) }}"><div id="repondre"> supprimer </div></a>
+</div>

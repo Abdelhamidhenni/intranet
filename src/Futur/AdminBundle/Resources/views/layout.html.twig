@@ -1,0 +1,34 @@
+{% include "FuturAdminBundle::menuadmin.html.twig" %}
+
+<header>
+	{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('css/Admincss/layout.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/Admincss/menuadmin.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/Admincss/Admin/ticket/ticket.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+
+
+
+	{% endblock css %}
+
+</header>
+
+<body>
+	<div id="content">
+
+	<div id="where">
+
+		{% block where %}layout{% endblock where %}
+
+	</div>
+
+		{% block mainadmin %}
+
+
+
+		{% endblock mainadmin %}
+
+	</div>
+
+</body>

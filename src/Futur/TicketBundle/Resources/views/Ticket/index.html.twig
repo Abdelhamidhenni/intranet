@@ -1,0 +1,21 @@
+{% extends "FuturTicketBundle::layout.html.twig" %}
+{% block main %}
+
+	<a href=" {{ path('ticket_new') }} " style="text-decoration:none;"><div id="newti">{% trans %}Nouveau ticket{% endtrans %}</div></a>
+	{% if ticket != NULL %}
+		<div id="mestickets">
+			{% for tickets in ticket %}
+				{% if tickets.idauteur == iduser %}
+					{% include "FuturTicketBundle:Ticket:ticket_elem.html.twig" %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% block mainticket %}
+		{% if id != NULL %}
+			{% include "FuturTicketBundle:Ticket:Ticket_detail.html.twig" %}
+		{% endif %}
+	{% endblock mainticket %}
+
+{% endblock %}

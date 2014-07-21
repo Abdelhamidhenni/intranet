@@ -1,0 +1,7 @@
+parameters:
+#    futur_annuaire.example.class: Futur\AnnuaireBundle\Example
+
+services:
+#    futur_annuaire.example:
+#        class: %futur_annuaire.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,33 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block title %}
+  Supprimer un module - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div class="addmod">
+
+    <h2>{% trans %}Supprimer ce module{% endtrans %}</h2>
+
+  <p>
+    {% trans %}Etes-vous certain de vouloir supprimer le module {% endtrans %} "{{ module.name }}" ?
+  </p>
+
+  {# On met l'id du module dans la route de l'action du formulaire #}
+  <form action="{{ path('futur_module_supprimer', {'id': module.id}) }}" method="post">
+  Vous pouvez
+   <a class="module_link" href="{{ path('futur_module_infos', {'id': module.id}) }}">
+    <strong>{% trans %}Annuler{% endtrans %} </strong>
+    </a>
+    /
+    <input type="submit" value="{% trans %}Supprimer{% endtrans %}" class="btn btn-danger" />
+    {{ form_rest(form) }}
+    {% trans %}le module{% endtrans %}.
+  </form>
+
+</div>
+
+
+
+{% endblock %}

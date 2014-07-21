@@ -1,0 +1,37 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+<div id="moduleglob">
+	<div id="leftArt2">
+
+	<br/>
+	<a id="massbut" href="{{ path('futur_module_homepage') }}">{% trans %}Retour au module{% endtrans %}</a>
+	</div>
+<div id="rightArt2">
+
+	{% include "FuturSujetBundle:Activites:activite_full.html.twig" %}
+
+	<div id="choices">
+
+	{% if is_granted("ROLE_ADMIN") %}
+
+
+		<a id="massbut2" href="{{ path('futur_activite_supprimer', {'id': activite.id, 'id2':activite.module}) }}">{% trans %}Supprimer cette activité{% endtrans %}</a>
+
+		<a id="massbut2" href="{{ path('futur_activite_modifier', {'id': activite.id, 'id2':activite.module}) }}">{% trans %}Modifier cette activité{% endtrans %}</a>
+
+
+	{% endif %}
+	</div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+{% endblock main %}

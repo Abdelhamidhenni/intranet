@@ -1,0 +1,29 @@
+{% include "FuturSiteBundle::layout.html.twig" %}
+
+<header>
+	{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/Modulecss/module.css') }}" type="text/css" />
+
+	{% endblock css %}
+
+</header>
+
+<body>
+	<div id="content">
+
+	<div id="where">
+
+		{% block where %}layout{% endblock where %}
+
+	</div>
+
+		{% block main %}
+
+
+
+		{% endblock main %}
+
+	</div>
+
+</body>

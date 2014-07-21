@@ -1,0 +1,19 @@
+ticket_homepage:
+    pattern:  /{_locale}/ticket/{id}
+    defaults: { _controller: FuturTicketBundle:Ticket:index, id: 0 }
+
+ticket_new:
+    pattern: /ticket/nouveau/{_locale}
+    defaults: { _controller: FuturTicketBundle:Ticket:nouveau }
+
+ticket_del:
+    pattern: /{_locale}/ticket/supprimer/{ticket}
+    defaults: { _controller: FuturTicketBundle:Ticket:supprimer }
+
+ticket_update:
+    pattern: /ticket/modifier/{_locale}/{ticket}
+    defaults: { _controller: FuturTicketBundle:Ticket:modifier }
+
+ticket_statut:
+    pattern: /ticket/statut/{_locale}/{ticket}
+    defaults: { _controller: FuturTicketBundle:Ticket:statut }

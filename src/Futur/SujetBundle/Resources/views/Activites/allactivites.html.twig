@@ -1,0 +1,46 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+
+{% if is_granted("ROLE_ADMIN") %}
+
+	<a style="text-decoration:none;" class="test" href="{{ path('futur_activite_add') }}">
+		<div class="activite_link">
+			+ {% trans %}Ajouter une activité{% endtrans %}
+		</div>
+	</a>
+
+<hr/>
+
+{% endif %}
+
+<div class="allactivites">
+
+	{% if is_granted("ROLE_ADMIN") %}
+
+
+	{% for activite in activites %}
+		<a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;">
+		<div class="activite_line">
+			{% include "FuturSujetBundle:Activites:activite.html.twig" %}
+		</div>
+		</a>
+		{% else %}
+			<div id="infos_1">{% trans %}Pas d'activité' pour l'instant {% endtrans %}</div>
+		{% endfor %}
+	</div>
+
+	{% else %}
+
+	{% for activite in activites %}
+		<a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;">
+		<div class="activite_line">
+			{% include "FuturSujetBundle:Activites:activite.html.twig" %}
+		</div>
+		</a>
+	{% endfor %}
+
+		{% endif %}
+	</div>
+{% endblock main %}

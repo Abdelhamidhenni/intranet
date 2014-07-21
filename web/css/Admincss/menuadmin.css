@@ -1,0 +1,43 @@
+#menuadmin
+{
+	position: 				absolute;
+	top:					30px;
+	left:					0px;
+	width: 					200px;
+	height: 				1253px;
+	background-color: 		#303030;
+}
+
+#menuadmin li
+{
+	font-family:			futura;
+	font-size: 				12px;
+	height: 				10px;
+	padding-bottom: 		20px;
+	margin-left:			-40px;
+	text-align: 			center;
+	color:					#9E9E9E;
+	padding-top: 			15px;
+	vertical-align: 		middle;
+	line-height: 			10px;
+}
+
+#menuadmin ul
+{
+	position:				absolute;
+	top:					0px;
+	width: 					100%;
+	text-align: 			center;
+}
+
+#menuadmin ul a
+{
+	text-decoration: 		none;
+}
+
+#menuadmin li:hover
+{
+	background-color:		black;
+	color:					white;
+ 	transition:				color 0.5s, background-color 0.5s, padding-right 0.5s, margin-left 0.5s, width 0.5s;
+}

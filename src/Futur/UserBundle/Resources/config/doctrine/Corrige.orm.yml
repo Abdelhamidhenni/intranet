@@ -1,0 +1,11 @@
+Futur\UserBundle\Entity\Corrige:
+    type: entity
+    table: null
+    repositoryClass: Futur\UserBundle\Entity\CorrigeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

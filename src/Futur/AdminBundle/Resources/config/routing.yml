@@ -1,0 +1,31 @@
+admin_home:
+    pattern: /
+    defaults: { _controller: FuturAdminBundle:Admin:ensemble }
+
+admin_vueensemble:
+    pattern: /vueensemble
+    defaults: { _controller: FuturAdminBundle:Admin:ensemble }
+
+admin_ticket:
+    pattern: /ticket/{id}
+    defaults: { _controller: FuturAdminBundle:ticket:ticket, id: 0 }
+
+admin_user:
+    pattern: /user/{id}
+    defaults: { _controller: FuturAdminBundle:user:user, id: 0 }
+
+admin_user_del:
+    pattern: /user/del/{id}
+    defaults: { _controller: FuturAdminBundle:user:del, id: 0 }
+
+admin_user_token:
+    pattern: /user/token/{id}
+    defaults: { _controller: FuturAdminBundle:user:token, id: 0 }
+
+admin_module:
+    pattern: /module/{id}
+    defaults: { _controller: FuturAdminBundle:module:module, id: 0 }
+
+admin_activite:
+    pattern: /activite/{id}
+    defaults: { _controller: FuturAdminBundle:activite:activite, id: 0 }

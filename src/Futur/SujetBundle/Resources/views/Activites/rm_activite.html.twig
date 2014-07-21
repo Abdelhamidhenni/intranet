@@ -1,0 +1,33 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block title %}
+  Supprimer une activite - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<div class="delmod">
+
+    <h2>{% trans %}Supprimer cette activite{% endtrans %}</h2>
+
+  <p>
+    {% trans %}Etes-vous certain de vouloir supprimer l'activité{% endtrans %} "{{ activite.name }}" ?
+  </p>
+
+  {# On met l'id du activite dans la route de l'action du formulaire #}
+  <form action="{{ path('futur_activite_supprimer', {'id': activite.id, 'id2':activite.module}) }}" method="post">
+  Vous pouvez
+   <a href="{{ path('futur_activite_infos', {'id': activite.id, 'id2':activite.module}) }}" style="text-decoration:none;">
+    <strong>{% trans %}Cancel{% endtrans %} </strong>
+    </a>
+    /
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {{ form_rest(form) }}
+    l'activité.
+  </form>
+
+</div>
+
+
+
+{% endblock %}

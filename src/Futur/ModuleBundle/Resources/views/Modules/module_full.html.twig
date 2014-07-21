@@ -1,0 +1,45 @@
+<div class="fullmodule">
+
+<h2>{{ module.name }}</h2>
+<br/>
+
+
+{% for modulep in user.modules if modulep.name == module.name %}
+
+  <p>
+    {% trans %}Tu es inscrit a ce module{% endtrans %}
+  </p>
+  <form method="post" {{ form_enctype(desinscription) }}>
+
+    {{ form_widget(desinscription) }}
+    {{form_rest(desinscription)}}
+
+  </form>
+  {% else %}
+
+   <p>{% trans %}Vous n'êtes pas inscrit à ce module {% endtrans %}!</p>
+
+  <form method="post" {{ form_enctype(inscription) }}>
+
+    {{ form_widget(inscription) }}
+    {{form_rest(inscription)}}
+
+  </form>
+
+{% endfor %}
+
+<br/>
+{% trans %}commence le{% endtrans %} {{ module.datestart |date('Y-m-d') }},
+{% trans %}finit le le{% endtrans %} {{ module.dateend |date('Y-m-d') }}
+<br/>
+<br/>
+  {% trans %}Description{% endtrans %}
+  <div class="mod_desc">
+    {{ module.description }}
+  </div>
+  {% trans %}Compétences développées{% endtrans %}
+  <div class="mod_desc">
+    {{ module.skills }}
+  </div>
+
+</div>

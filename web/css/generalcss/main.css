@@ -1,0 +1,178 @@
+html
+{
+	background-color: 	AntiqueWhite;
+}
+
+#main
+{
+  	min-height: 		1000px;
+  	min-width:			740px;
+  	margin: 			-20px 0px 0px 240px;
+  	padding:			10px;
+	background-color: 	AntiqueWhite;
+  	font-family: 		Indie Flower;
+}
+
+#main h4
+{
+	text-align: 		left;
+	padding-top: 		10px;
+	padding-left: 		30px;
+}
+
+#ticket_submit
+{
+	left:				880px;
+	top:				15px;
+}
+
+#main li
+{
+	list-style: 		none;
+}
+
+a
+{
+	text-decoration: 	none;
+}
+
+h4
+{
+	text-decoration: 	underline;
+}
+
+#connexion
+{
+	height: 			270px;
+	left:				10px;
+}
+
+.well
+{
+	background-color: 	#442211;
+	border-radius: 		none;
+}
+
+#see_t
+{
+	padding-left:		20px;
+	z-index: 			99;
+}
+
+#b1
+{
+	width: 				150px;
+}
+
+.user
+{
+	height: 			25px;
+}
+
+#sub
+{
+	margin-top: 		-30px;
+	margin-left: 		10px;
+	color: 				black;
+	background-color: 	white;
+	border: 			1px solid grey;
+	transition:			box-shadow 0.5s;
+}
+
+#sub:hover
+{
+	box-shadow: 		5px 5px 5px #bbb;
+	transition:			box-shadow 0.5s;
+}
+
+.left_index
+{
+	width: 				45%;
+	padding: 			10px;
+	border-radius: 		10px;
+	font-size: 			24px;
+	color: 				rgba(169,3,41,1);
+
+}
+
+.title2
+{
+	padding-left: 		10px;
+}
+
+[draggable=true] {
+    cursor: move;
+}
+
+.current_act
+{
+	padding: 			20px;
+	color: 				AntiqueWhite;
+	font-size: 			20px;
+	border-radius: 		10px;
+	background-color:  	rgba(169,3,41,1);
+	box-shadow: 		6px 6px 6px #aaa;
+	margin: 			0px 0px 10px 0px;
+}
+
+.current_act a
+{
+	color: 				#442211;
+	text-decoration: 	none;
+	transition:			background-color 0.6s, color 0.6s;
+	padding: 			1px;
+	padding-left: 		4px;
+	background-color: 	rgba(209,3,41,1);
+	margin-right: 		5px;
+	border-radius: 		4px;
+}
+
+.current_act a:hover
+{
+	text-decoration: 	none;
+	color: 				AntiqueWhite;
+	background-color: 	rgba(250,3,41,1);
+	transition:			background-color 0.6s, color 0.6s;
+}
+
+.current_act p
+{
+	background-color: 	transparent;
+}
+
+.navbar-default
+{
+	background-color: 	red;
+}
+
+.userglob
+{
+	color: 				rgba(169,3,41,1);
+	padding: 			10px;
+}
+
+.userglob h1
+{
+	margin-left: 		20px;
+}
+
+
+.userprof
+{
+	background-color: 	rgba(169,3,41,1);
+	color: 				AntiqueWhite;
+	font-size: 			20px;
+	padding: 			20px;
+	border-radius: 		10px;
+	box-shadow: 		5px 5px 5px #999;
+}
+
+.usermods
+{
+	background-color: 	rgba(169,3,41,1);
+	color: 				AntiqueWhite;
+	font-size: 			20px;
+	padding: 			20px;
+	border-radius: 		10px;
+	box-shadow: 		5px 5px 5px #999;
+}

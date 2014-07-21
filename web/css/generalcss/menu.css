@@ -1,0 +1,145 @@
+#menu
+{
+	position: 					absolute;
+	top:						0px;
+	left:						0px;
+	float:						left;
+	width:						240px;
+	min-width: 					50px;
+	height: 					1340px;
+	text-align: 				left;
+  	font-family: 				Indie Flower;
+	background-image: 			url(http://24.media.tumblr.com/66d11ea7495b9600a054970a0ca06636/tumblr_myoa03mHLN1rulhlao1_500.jpg);
+	background-repeat: 			no-repeat;
+	background-position: 		center center;
+	background-size: 			cover;
+
+}
+
+#menu	ul
+{
+	list-style-type: 			none;
+	margin-left: 				-101px;
+	position: 					absolute;
+	vertical-align: 			middle;
+	top:						99px;
+}
+
+#menu #fullmenu	li
+{
+	height:						50px;
+	padding-top:				10px;
+	padding-right: 				10px;
+	margin-top: 				-1px;
+	font-size: 					18px;
+	border-right: 				0;
+	width: 						251px;
+	margin-left: 				50px;
+	color:						AntiqueWhite;
+	padding-left: 				20px;
+	background-color: 			rgba(169,3,41,1);
+	margin-bottom: 				10px;
+	border-top: 				2px solid #442211;
+	border-bottom: 				2px solid #442211;
+	transition:					color 0.5s, background 0.5s, padding-right 0.5s, margin-left 0.5s, width 0.5s;
+}
+
+#menu #fullmenu	li:hover
+{
+	background-color: 			AntiqueWhite;
+	color:						#442211;
+	padding-right: 				20px;
+	margin-left: 				60px;
+	width: 						241px;
+	transition:					color 0.5s, background 0.5s, padding-right 0.5s, margin-left 0.5s, width 0.5s;
+}
+
+#menu #fullmenu	li:active
+{
+	background-color: 			AntiqueWhite;
+	color:						#442211;
+	padding-right: 				20px;
+	margin-left: 				60px;
+	width: 						241px;
+}
+
+#menu	li:active
+{
+	background-color: 			Sienna;
+}
+
+#menu a
+{
+	text-decoration:			none;
+}
+
+
+#language2
+{
+	background-color: 			red;
+}
+
+
+#language2 ul
+{
+	margin-top: 				-100px;
+	margin-left: 				0px;
+	width: 						201px;
+	height:						50px;
+	background-color: 			rgba(169,3,41,1);
+	color: 						AntiqueWhite;
+	font-size: 					20px;
+	text-align: 				center;
+	padding-left: 				20px;
+	vertical-align: 			middle;
+	line-height: 				50px;
+	border-bottom: 				2px solid #442211;
+	border-right: 				2px solid #442211;
+	transition:					background-color 0.6s;
+}
+
+#language2 ul li
+{
+	margin-top: 				-2px;
+	position: 					relative;
+	background-color: 			rgba(169,3,41, 0);
+	text-align: 				center;
+	height:						50px;
+	padding-right: 				10px;
+	font-size: 					18px;
+	border-bottom: 				2px solid #442211;
+	border-top: 				2px solid #442211;
+	box-shadow: 				6px 6px 6px #222;
+	width: 						201px;
+	margin-left: 				50px;
+	color:						AntiqueWhite;
+	transition:					background-color 1s, display 0.6s, margin-top 0.6s;
+	padding-left: 				20px;
+	position: 					relative;
+	display: 					none;
+}
+
+#language2 ul:hover
+{
+	padding-right: 				8px;
+	background-color: 			rgba(209,3,41,1);
+	transition:					background-color 0.6s;
+}
+
+#language2 ul:hover li
+{
+	display: 					block;
+	margin-left: 				-20px;
+	background-color: 			rgba(169,3,41,1);
+	transition:					background-color 1s. display 0.6s, margin-top 0.6s;
+	color:						AntiqueWhite;
+	z-index: 					100;
+}
+
+#language2 ul:hover li:hover
+{
+	background-color: 			rgba(209,3,41,1);
+	transition:					background-color 0.6s. display 0.6s, margin-top 0.6s;
+}
+
+

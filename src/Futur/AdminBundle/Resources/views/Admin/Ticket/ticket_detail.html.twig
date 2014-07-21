@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ asset('css/Admincss/Admin/ticket/ticket_rep.css') }}" type="text/css" />
+
+<div id=reponse>
+<div id="idrep">Id : {{ ticket.id }}</div>
+<div id="nomrep"> Pseudo : {{ auteur }}</div>
+<div id="daterep">Date : {{ ticket.date | date("m/d/Y") }}</div>
+<div id="assignationrep">
+		<form method="POST" {{ form_enctype(form) }} >
+			Assigné à : {{ form_widget(form.assignation, { 'attr': { 'maxlength' : 10, 'class' : 'loulz' } }) }}
+			<button type="submit" class="b4">Envoyez</button>
+</div>
+<div id="titrerep"> Titre : {{ ticket.titre }} </div>
+<div id="problemerep"> Probleme : {{ ticket.probleme }} </div>
+<div id="qwerty">
+		{{ form_widget(form.reponse, { 'attr' : {'class' : 'sup' }}) }}
+		{{ form_rest(form) }}
+		<button type="submit" class="b5">Enregistrer</button>
+	</form>
+</div>
+</div>

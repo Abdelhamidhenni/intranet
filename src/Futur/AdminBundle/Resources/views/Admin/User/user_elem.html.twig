@@ -1,0 +1,8 @@
+<div id="elem">
+	<a href="{{ path('admin_user', {'id' : user.id }) }}">
+		<div id="nom">{{ user.id }}</div>
+		<div id="date">{{ user.username }} </div>
+		<a href=" {{ path('admin_user_token', { 'id' : user.id }) }} "><div id="titre"> Generer un token </div></a>
+		<a href=" {{ path('admin_user_del', { 'id' : user.id }) }} "><div id="repondre"> Supprimer </div></a>
+	</a>
+</div>

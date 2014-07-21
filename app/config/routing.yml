@@ -1,0 +1,60 @@
+futur_note:
+    resource: "@FuturNoteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_cours:
+    resource: "@FuturCoursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_fofo:
+    resource: "@FuturFofoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_annuaire:
+    resource: "@FuturAnnuaireBundle/Resources/config/routing.yml"
+    prefix:   /annuaire
+
+futur_planning:
+    resource: "@FuturPlanningBundle/Resources/config/routing.yml"
+    prefix:   /planning
+
+futur_sujet:
+    resource: "@FuturSujetBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+futur_module:
+    resource: "@FuturModuleBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+futur_admin:
+    resource: "@FuturAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+futur_user:
+    resource: "@FuturUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_user2:
+    resource: "@FuturUserBundle/Resources/config/security.xml"
+    prefix:   /
+
+futur_ticket:
+    resource: "@FuturTicketBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_site:
+    resource: "@FuturSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+futur_module_homepage:
+    resource: "@FuturModuleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CCDNForumForumBundle:
+    resource: "@CCDNForumForumBundle/Resources/config/routing.yml"
+
+ccdn_homepage:
+    pattern: /{_locale}/forumName
+    defaults: { _controller: CCDNForumForumBundle:UserCategory:index, _locale: en, forumName: defaults }

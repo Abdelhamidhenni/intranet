@@ -1,0 +1,36 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+
+<div class="paper">
+
+<h2> {{ activite.name }} </h2>
+
+
+
+
+<br/>
+{% trans %} Liste des cours pour cette activité {% endtrans %}:
+
+
+{% for all in allcours if all.activite == activite %}
+
+<li>
+<a href="{{ asset(all.webPath) }}" title="{{ all.name }}"><h3>{{ all.name }}</h3></a>
+</li>
+
+{% else %}
+
+{% trans %}Pas de cours pour l'instant {% endtrans %} :(
+
+{% endfor %}
+
+<a href="{{ path('futur_cours_add', {'id': activite.id}) }}" style="text-decoration:none;">
+	+ {% trans %}Ajouter un cours {% endtrans %} :(
+</a>
+</div>
+
+
+
+{% endblock main %}

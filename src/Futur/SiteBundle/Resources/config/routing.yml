@@ -1,0 +1,11 @@
+futursite_homepage:
+    pattern:  /{_locale}
+    defaults: { _controller: FuturSiteBundle:Site:index, _locale : fr }
+
+futursite2_homepage:
+    pattern:  /accueil/{_locale}
+    defaults: { _controller: FuturSiteBundle:Site:index }
+
+traduction:
+    pattern:  /traduction/
+    defaults: { _controller: FuturSiteBundle:Site:traduction }

@@ -1,0 +1,16 @@
+{% extends "FuturAdminBundle::layout.html.twig" %}
+
+{% block where %}
+
+	Activite
+
+{% endblock where %}
+
+{% block mainadmin %}
+	<div id="affichage">
+    {% for activite in activite %}
+          {% include "FuturAdminBundle:Admin/activite:activite_elem.html.twig" %}
+    {% endfor %}
+  </div>
+
+{% endblock mainadmin %}

@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{ asset('css/Admincss/Admin/ticket/ticket_rep.css') }}" type="text/css" />
+
+<div id=reponse>
+	<div id="idrep">Id : {{ user.id }}</div>
+	<div id="nomrep"> Pseudo : {{ user.username }}</div>
+	<div id="daterep">Token : {% if user.token != NULL %} {{ user.token.str }} {% endif %} </div>
+	<div id="titrerep"></div>
+	<div id="problemerep"></div>
+</div>

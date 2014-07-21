@@ -1,0 +1,48 @@
+{% extends "FuturSiteBundle::layout.html.twig" %}
+
+{% block main %}
+
+
+{% if is_granted("ROLE_ADMIN") %}
+
+	<a style="text-decoration:none;" class="test" href="{{ path('futur_module_add') }}">
+		<div class="module_link">
+			+ {% trans %}Ajouter un module{% endtrans %}
+		</div>
+	</a>
+
+<hr/>
+
+{% endif %}
+
+<div class="allmodules">
+
+<h1 style="margin-left: 20px;">{% trans %}Liste des modules{% endtrans %} : </h1>
+	{% if is_granted("ROLE_ADMIN") %}
+
+	{% for module in modules %}
+		<a href="{{ path('futur_module_infos', {'id': module.id}) }}" style="text-decoration:none;">
+		<div class="module_line" style="text-decoration:none;">
+			{% include "FuturModuleBundle:Modules:module.html.twig" %}
+		</div>
+		</a>
+		{% else %}
+			<div id="infos_1">{% trans %}Pas de module pour l'instant {% endtrans %}!</div>
+		{% endfor %}
+	</div>
+
+	{% else %}
+
+	{% for module in modules %}
+		<a href="{{ path('futur_module_infos', {'id': module.id}) }}" style="text-decoration:none;">
+		<div class="module_line" style="text-decoration:none;">
+			{% include "FuturModuleBundle:Modules:module.html.twig" %}
+		</div>
+		</a>
+		{% else %}
+			<div id="infos_1">{% trans %}Pas de module pour l'instant {% endtrans %}!</div>
+		{% endfor %}
+
+		{% endif %}
+	</div>
+{% endblock main %}

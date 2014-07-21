@@ -1,0 +1,13 @@
+# Yearbook
+yearbook:
+    search:
+        uid: Recherche par UID
+        first_name: Recherche par prénom
+        last_name: Recherche par nom
+    title: Annuaire des étudiants
+    data:
+        uid: UID
+        first_name: Prénom
+        last_name: Nom
+        email: Email
+        mobile_phone: Tél.

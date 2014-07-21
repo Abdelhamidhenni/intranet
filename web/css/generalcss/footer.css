@@ -1,0 +1,20 @@
+footer
+{
+	background-color: 			#442211;
+	height: 					80px;
+	bottom: 					0px;
+	position: 					fixed;
+	width: 						100%;
+	border-top: 				10px solid Sienna;
+	font-size: 					18px;
+	font-family: 				Indie Flower;
+	text-align: 				left;
+	margin-left: 				-10px;
+}
+
+#titre2 h3
+{
+	margin-left: 				30px;
+	font-size: 					20px;
+	color: 						Antiquewhite;
+}

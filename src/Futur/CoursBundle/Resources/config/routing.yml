@@ -1,0 +1,11 @@
+futur_cours_homepage:
+    pattern:  /cours/{_locale}
+    defaults: { _controller: FuturCoursBundle:Cours:index }
+
+futur_cours_infos:
+    pattern:  /cours/{id}/{_locale}
+    defaults: { _controller: FuturCoursBundle:Cours:voir }
+
+futur_cours_add:
+    pattern:  /addcours/{id}/{_locale}
+    defaults: { _controller: FuturCoursBundle:Cours:add }

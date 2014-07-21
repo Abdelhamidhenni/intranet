@@ -1,0 +1,22 @@
+<a href=" {{ path('ticket_homepage', { 'id' : tickets.id }) }} ">
+	{% if tickets.statut == false %}
+		<div id="elem" style="background-color:white;">
+	{% else %}
+		<div id="elem">
+	{% endif %}
+			<div id="id"> {{ tickets.id }} </div>
+			<div id="date"> {{ tickets.date | date("d/m/Y") }} </div>
+			<div id="titre2"> {{ tickets.titre }} </div>
+			<div id="repondre">
+			{% if tickets.repondu == 1 and tickets.statut == true and tickets.vu == false %}
+				<span style="color:red"> {% trans %}Nouvelle réponse{% endtrans %} ! </span>
+			{% elseif tickets.repondu == 1 and tickets.statut == true and tickets.vu == true %}
+				{% trans %}Voir la réponse{% endtrans %}
+			{% elseif tickets.statut == true %}
+			 	{% trans %}Pas de réponse{% endtrans %}
+			{% elseif tickets.statut == false %}
+				<img src=" {{ asset('img/cadenas.jpg') }} " />
+			 {% endif %}
+			 </div>
+		</div>
+</a>

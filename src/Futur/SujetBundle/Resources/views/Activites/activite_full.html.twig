@@ -1,0 +1,70 @@
+<div class="fullactivite">
+
+<div class="title_sub">
+
+<h2>{{ activite.name }}</h2>
+
+{% if activite.sujet != NULL %}
+<a href="{{ asset(activite.sujet.webPath) }}" title="{{ activite.description }}"><h3>{% trans %}Accéder au sujet{% endtrans %}</h3></a>
+{% endif %}
+
+</div>
+<br/>
+
+
+{% for activite1 in activites if activite1 == activite %}
+
+  {% if activite1 in user.activites %}
+
+  <p>
+    {% trans %}Tu es inscrit a cette activité{% endtrans %}
+  </p>
+  <form method="post" {{ form_enctype(desinscription) }}>
+
+    {{ form_widget(desinscription) }}
+    {{form_rest(desinscription)}}
+
+  </form>
+  {% elseif date(activite1.dateliminsc) < date() %}
+
+
+  <p>
+     {% trans %}Vous avez loupé les inscriptions a cette activité{% endtrans %} !</p>
+
+  {% else %}
+
+
+   <p>
+    {% trans %}Vous n'êtes pas inscrit à cette activité ! Vous devez vous inscrire avant le{% endtrans %}   {{ activite1.dateliminsc |date('Y-m-d') }}</p>
+
+     <form method="post" {{ form_enctype(inscription) }}>
+
+    {{ form_widget(inscription) }}
+    {{form_rest(inscription)}}
+
+  </form>
+
+   {% endif %}
+
+
+
+{% endfor %}
+
+<br/>
+{% trans %}commence le{% endtrans %} {{ activite.datedebut |date('Y-m-d') }},
+{% trans %}finit le{% endtrans %} {{ activite.datefin |date('Y-m-d') }}
+<br/>
+<br/>
+  Description :
+  <div class="mod_desc">
+    {{ activite.description }}
+  </div>
+  {% if activite.maxgroupesize == 1 %}
+  <p>{% trans %}Ce projet est a réaliser individuellement{% endtrans %}.</p>
+  {% elseif activite.maxgroupesize == activite.mingroupesize %}
+  <p>{% trans %}Ce projet est a réaliser par groupes de{% endtrans %} {{ activite.maxgroupesize }} {% trans %}étudiants{% endtrans %}.</p>
+  {% else %}
+  <p>{% trans %}Ce projet est a réaliser par groupes de{% endtrans %} {{ activite.mingroupesize }} à {{ activite.maxgroupesize }} {% trans %}étudiants{% endtrans %}.</p>
+  {% endif %}
+
+</div>

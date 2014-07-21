@@ -1,0 +1,118 @@
+#futur_sujetbundle_activite_name
+{
+	margin-left: 			90px;
+}
+
+#futur_sujetbundle_activite_description
+{
+	margin-left: 			53px;
+	height: 				80px;
+	width: 					300px;
+}
+
+#futur_sujetbundle_activite_maxinscrit
+{
+	margin-left: 			65px;
+}
+
+#futur_sujetbundle_activite_mingroupesize
+{
+	margin-left: 			35px;
+}
+
+
+#futur_sujetbundle_activite_maxgroupesize
+{
+	margin-left: 			30px;
+}
+
+
+#futur_sujetbundle_activite_groupesize
+{
+	margin-left: 			50px;
+}
+
+#futur_sujetbundle_activite_type
+{
+	margin-left: 			90px;
+}
+
+#futur_sujetbundle_activite_module
+{
+	margin-left: 			80px;
+}
+
+#futur_sujetbundle_activite_inscriptiontype
+{
+	margin-left: 			0px;
+}
+
+.fullactivite
+{
+	background-color: 		rgba(169,3,41,1);
+	padding: 				20px;
+	margin: 				20px 10px 20px 10px;
+	border-radius: 			10px;
+	color: 					AntiqueWhite;
+	font-size: 				18px;
+}
+
+.fullactivite h2
+{
+	background-color: 		rgba(109,2,1,1);
+	padding: 				10px;
+	margin-top: 			-5px;
+	border-radius: 			10px;
+}
+
+.fullactivite .mod_desc
+{
+	background-color: 		White;
+	padding: 				10px;
+	margin:					5px 0px 5px 0px;
+}
+
+.title_sub
+{
+	background-color: 		rgba(169,3,41,1);
+}
+
+.title_sub h3
+{
+	float: 					right;
+	margin-top: 			-57px;
+	margin-right: 			10px;
+	background-color: 		rgba(209,3,41,1);
+	padding: 				10px 10px 5px 10px;
+	border-radius: 			6px;
+	transition:				background-color 0.6s;
+}
+
+.title_sub a h3:hover
+{
+	color: 					AntiqueWhite;
+	background-color: 		rgba(239,3,41,1);
+	transition:				background-color 0.6s;
+}
+
+.title_sub a
+{
+	text-decoration: 		none;
+	color: 					AntiqueWhite;
+}
+
+.fullactivite form button
+{
+	color: 						AntiqueWhite;
+	background-color: 			rgba(209,3,41,1);
+	border:						none;
+	border-radius: 				6px;
+	padding: 					6px;
+	transition:					background-color 0.6s;
+}
+
+.fullactivite form button:hover
+{
+	background-color: 			rgba(249,3,41,1);
+	transition:					background-color 0.6s;
+}

@@ -1,0 +1,26 @@
+futur_planning_homepage:
+    pattern:  /{_locale}
+    defaults: { _controller: FuturPlanningBundle:Planning:index }
+
+futur_planning_homepage2:
+    pattern:  /{_locale}
+    defaults: { _controller: FuturPlanningBundle:Planning:index }
+
+futur_planning_voir_date_mois:
+    pattern:  /{_locale}/{year}/{month}
+    defaults: { _controller: FuturPlanningBundle:Planning:voirDateMois }
+    requirements:
+        year:   \d{4}
+        month:  \d{1,2}
+
+futur_planning_voir_date_jour:
+    pattern:  /{_locale}/{year}/{month}/{day}
+    defaults: { _controller: FuturPlanningBundle:Planning:voirDateJour }
+    requirements:
+        year:   \d{4}
+        month:  \d{1,2}
+        day:    \d{1,2}
+
+futur_planning_creer_evenement:
+    pattern:  /{_locale}/creer/evenement
+    defaults: { _controller: FuturPlanningBundle:Planning:creerEvenement }

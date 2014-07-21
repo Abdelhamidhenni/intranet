@@ -1,0 +1,13 @@
+{% extends "FuturPlanningBundle::layout.html.twig" %}
+{% block main %}
+
+	{% block mainplanning %}
+<h3>Créer un évènement</h3>
+
+<form method="post" {{ form_enctype(form) }}>
+{{ form_widget(form) }}
+<input type="submit" class="btn btn-primary" />
+</form>
+	{% endblock mainplanning %}
+
+{% endblock %}

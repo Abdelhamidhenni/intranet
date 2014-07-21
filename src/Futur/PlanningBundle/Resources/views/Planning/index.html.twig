@@ -1,0 +1,108 @@
+{% extends "FuturPlanningBundle::layout.html.twig" %}
+{% block main %}
+
+	{% block mainplanning %}
+
+<div class="planningtitle">
+
+	{{ 'planning.title'|trans }}
+
+</div>
+
+<div class="planning">
+
+<table>
+	<tr>
+		<td colspan="7" align="center">
+			<a href="{{ path('futur_planning_homepage') }}/{{ yearNum }}/{{ monthNum - 1}}">
+				&lt;&lt;
+			</a>
+			&nbsp;&nbsp;{{ monthArray[monthNum] }}&nbsp;&nbsp;
+			<a href="{{ path('futur_planning_homepage') }}/{{ yearNum }}/{{ monthNum + 1}}">
+				&gt;&gt;
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" align="center">
+			<a href="{{ path('futur_planning_homepage') }}/{{ yearNum - 1}}/{{ monthNum}}">
+				&lt;&lt;
+			</a>
+			&nbsp;&nbsp;{{ yearNum }}&nbsp;&nbsp;
+			<a href="{{ path('futur_planning_homepage') }}/{{ yearNum + 1}}/{{ monthNum}}">
+				&gt;&gt;
+			</a>
+		</td>
+	</tr>
+
+	<tr>
+		{% for i in 1..7 %}
+		<td>
+			{{ dayArray[loop.index] }}&nbsp;
+		</td>
+		{% endfor %}
+	</tr>
+
+	{% for i in 0..5 %}
+	<tr>
+		{% for j in 0..6 %}
+			<td>
+				{% if planningArray[i][j] starts with '*' %}
+					<a href="{{ path('futur_planning_homepage') }}/{{ yearNum }}/{{ monthNum}}/{{ planningArray[i][j][1:] }}" style="text-decoration: none; color: black;">
+						{{ planningArray[i][j][1:] }}
+					</a>
+				{% else %}
+					<a href="{{ path('futur_planning_homepage') }}/{{ yearNum }}/{{ monthNum}}/{{ planningArray[i][j] }}" style="text-decoration: none;
+{% if (monthNum == monthDate) and (yearNum == yearDate) and (yearNum == yearDate) and (planningArray[i][j] == dayDate) %}
+	background-color: 	rgba(109,3,41,1);
+	padding-left:		13px;
+	padding-right:		13px;
+	border-radius:		6px;
+{% else %}
+
+{% endif %}"
+					>
+						{{ planningArray[i][j] }}
+					</a>
+				{% endif %}
+			</td>
+		{% endfor %}
+	</tr>
+	{% endfor %}
+</table>
+
+</div>
+
+<div class="paper" style="font-family: Calibri, Arial, serif, sans-serif;">
+
+	<div class="curdate">
+
+	{{ 'planning.events'|trans }} {{ day|date('W') }} [{{ dayNum }}/{{ monthNum }}/{{ yearNum }}] :
+
+	</div>
+		{% for event in allevents if day|date('YW') >= event.startDate|date('YW') and day|date('YW') <= event.endDate|date('YW') %}
+			<h3>{{ event.name }}</h3>
+			<p>{{ 'planning.event.start'|trans }} : {{ event.startDate|date('d M Y H:i') }}</p>
+			<p>{{ 'planning.event.end'|trans }} : {{ event.endDate|date('d M Y H:i') }}</p>
+			<p>{{ 'planning.event.description'|trans }} :<br />{{ event.description }}</p>
+	{% else %}
+
+		{{ 'planning.event.nothing'|trans }}
+
+	{% endfor %}
+
+</div>
+
+
+<hr />
+<a href="{{ path('futur_planning_creer_evenement') }}">
+<div class="addeventp">
+
+
+Créer un évènement
+
+</div>
+</a>
+	{% endblock mainplanning %}
+
+{% endblock %}

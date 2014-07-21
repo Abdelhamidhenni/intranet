@@ -1,0 +1,8 @@
+# Planning
+planning:
+    title: Planning
+    events: Evénements de la semaine
+    event:
+        start: Démarre le/A démarré le
+        end: Jusqu'au
+        description: Informations à propos de l'événement

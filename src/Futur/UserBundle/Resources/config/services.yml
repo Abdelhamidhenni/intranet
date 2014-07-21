@@ -1,0 +1,7 @@
+parameters:
+#    futur_user.example.class: Futur\UserBundle\Example
+
+services:
+#    futur_user.example:
+#        class: %futur_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

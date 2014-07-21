@@ -1,0 +1,155 @@
+.planning
+{
+	background-color: 			rgba(169,3,41,1);
+	color: 						AntiqueWhite;
+	font-size: 					26px;
+	padding: 					20px;
+	text-align: 				center;
+	border-radius: 				10px;
+	margin: 					20px;
+	box-shadow: 				5px 5px 5px #999;
+	border:						3px solid rgba(109,3,41,1);
+}
+
+.planningtitle
+{
+	background-color: 			rgba(169,3,41,1);
+	color: 						AntiqueWhite;
+	font-size: 					36px;
+	padding: 					10px;
+	text-align: 				center;
+	border-radius: 				10px;
+	margin: 					20px;
+	box-shadow: 				5px 5px 5px #999;
+	border:						3px solid rgba(109,3,41,1);
+}
+
+.planning a
+{
+	color: 						AntiqueWhite;
+	padding-left:				13px;
+	padding-right:				13px;
+	border-radius:				6px;
+	transition:					background-color 0.6s;
+}
+
+.planning a:hover
+{
+	background-color: 			rgba(109,3,41,1);
+	transition:					background-color 0.6s;
+}
+
+.planning table
+{
+	text-align: 				center;
+	margin: 					auto;
+}
+
+.paper p
+{
+	padding-left: 				40px;
+}
+
+.paper a
+{
+	color: 						blue;
+	transition:					color 0.5s;
+}
+
+.paper a:hover
+{
+	color: 						SkyBlue;
+	transition:					color 0.5s;
+}
+
+.addeventp
+{
+	text-align: 				center;
+	background-color: 			rgba(169,3,41,1);
+	padding: 					10px;
+	margin:						20px;
+	border-radius: 				10px;
+	border:						3px solid rgba(109,3,41,1);
+	transition:					background-color 0.6s, border 0.6s;
+	font-size: 					20px;
+}
+
+.framen
+{
+	padding-left: 				40px;
+	font-size: 					30px;
+	margin-top: 				20px;
+}
+
+.addeventp:hover
+{
+	background-color: 			rgba(209,3,41,1);
+	border:						3px solid rgba(169,3,41,1);
+	transition:					background-color 0.6s, border 0.6s;
+}
+
+.addeventp a
+{
+	text-align: 				center;
+	padding: 					0px;
+	color: 						antiquewhite;
+}
+
+a
+{
+	color: 						AntiqueWhite;
+}
+
+a:hover
+{
+	text-decoration: 			none;
+	color: 						AntiqueWhite;
+}
+
+.curdate
+{
+	text-align: 				center;
+	font-size: 					20px;
+	padding: 					10px;
+	margin: 					20px;
+	border-radius: 				10px;
+}
+
+/* Paper Effect */
+
+.paper
+{
+    background-color: 			#eee;
+	background-image: 			-webkit-linear-gradient(hsla(0,0%,0%,.025), hsla(0,0%,100%,.05) 33%, hsla(0,0%,0%,.05) 33%, hsla(0,0%,100%,.05) 67%, hsla(0,0%,0%,.05) 67%, hsla(0,0%,100%,.025));
+	box-shadow: 				inset 0 0 0 .1em hsla(0,0%,0%,.1),
+        						inset 0 0 1em hsla(0,0%,0%,.05),
+        						0 .1em .25em hsla(0,0%,0%,.5);
+    position: 					relative;
+    margin: 					20px;
+    padding:					20px;
+    font-size: 					20px;
+}
+.paper:after,
+.paper:before
+{
+    bottom: 					.1em;
+    box-shadow: 				0 0 .5em .5em hsla(0,0%,0%,.25);
+    content: 					'';
+    height:						3em;
+    position:					absolute;
+    width: 						80%;
+    z-index: 					-1;
+}
+.paper:after
+{
+    right: 						1em;
+    -webkit-transform: 			rotate(3deg);
+    -webkit-transform-origin: 	100% 100%;
+}
+.paper:before
+{
+    left: 						1em;
+    -webkit-transform: 			rotate(-3deg);
+    -webkit-transform-origin: 	0% 100%;
+}​
+

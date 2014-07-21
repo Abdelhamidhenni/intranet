@@ -1,0 +1,7 @@
+parameters:
+#    futur_site.example.class: Futur\SiteBundle\Example
+
+services:
+#    futur_site.example:
+#        class: %futur_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
