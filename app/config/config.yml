@@ -98,35 +98,3 @@ fos_user:
     db_driver:     orm                        # Le type de BDD à utiliser, nous utilisons l'ORM Doctrine depuis le début
     firewall_name: main                       # Le nom du firewall derrière lequel on utilisera ces utilisateurs
     user_class:    Futur\UserBundle\Entity\User
-
-fr3d_ldap:
-    driver:
-        host:                ldap.42.fr
-        port:                389
-        username:            uid=apetit,ou=2013,ou=people,dc=42,dc=fr
-        password:            6kdVDjc6
-        bindRequiresDn:      true
-        baseDn:              dc=42,dc=fr
-#        accountFilterFormat: (&(uid=%s)) # Optional. sprintf format %s will be the username
-#        optReferrals:        false  # Optional
-#        useSsl:              true   # Enable SSL negotiation. Optional
-#        useStartTls:         true   # Enable TLS negotiation. Optional
-    user:
-        baseDn: dc=42,dc=fr
-        filter: (&(ObjectClass=ft-user))
-        attributes:          # Specify ldap attributes mapping [ldap attribute, user object method]
-           - { ldap_attr: uid,  user_method: setUsername }
-           - { ldap_attr: alias,   user_method: setEmail }
-           - { ldap_attr: cn,  user_method: setCn }
-           - { ldap_attr: first-name,  user_method: setFirstName }
-           - { ldap_attr: last-name,  user_method: setLastName }
-           #- { ldap_attr: birth-date,  user_method: setBirthDate }
-           - { ldap_attr: mobile-phone,  user_method: setMobilePhone }
-           #- { ldap_attr: city,  user_method: setCity }
-           #- { ldap_attr: postal-code,  user_method: setPostalCode }
-           #- { ldap_attr: nationality,  user_method: setNationality }
-           #- { ldap_attr: country,  user_method: setCountry }
-           #- { ldap_attr: degree,  user_method: setDegree }
-    service:
-#        user_manager: fos_user.user_manager          # Overrides default user manager
-        ldap_manager: fr3d_ldap.ldap_manager.default # Overrides default ldap manager

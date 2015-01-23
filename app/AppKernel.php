@@ -23,7 +23,6 @@ class AppKernel extends Kernel
             new Futur\AdminBundle\FuturAdminBundle(),
             new Futur\ModuleBundle\FuturModuleBundle(),
             new Futur\SujetBundle\FuturSujetBundle(),
-            new FR3D\LdapBundle\FR3DLdapBundle(),
             new Futur\PlanningBundle\FuturPlanningBundle(),
             new Futur\AnnuaireBundle\FuturAnnuaireBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),

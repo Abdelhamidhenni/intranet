@@ -20,7 +20,6 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "dev-master",
-        "fr3d/ldap-bundle": "2.0.*@dev",
         "codeconsortium/ccdn-forum-bundle": "2.0.3"
     },
     "scripts": {

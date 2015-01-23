@@ -2,8 +2,7 @@
 
 namespace Futur\UserBundle\Entity;
 
-use FOS\UserBundle\Entity\User as BaseUser;
-use FR3D\LdapBundle\Model\LdapUserInterface as LdapUserInterface;
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,8 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="Futur\UserBundle\Entity\UserRepository")
  */
-class User extends BaseUser implements LdapUserInterface
-{
+class User extends BaseUser {
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
