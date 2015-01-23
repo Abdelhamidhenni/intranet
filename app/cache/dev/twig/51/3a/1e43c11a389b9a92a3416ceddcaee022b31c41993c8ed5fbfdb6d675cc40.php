@@ -112,7 +112,7 @@ class __TwigTemplate_513a1e43c11a389b9a92a3416ceddcaee022b31c41993c8ed5fbfdb6d67
         if (((isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")) != null)) {
             // line 17
             echo "\t\t\t";
-            $this->env->loadTemplate("FuturTicketBundle:Ticket:Ticket_detail.html.twig")->display($context);
+            $this->env->loadTemplate("FuturTicketBundle:Ticket:ticket_detail.html.twig")->display($context);
             // line 18
             echo "\t\t";
         }

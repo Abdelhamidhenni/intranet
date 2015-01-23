@@ -178,7 +178,7 @@ class __TwigTemplate_b60ba6f9f91b5424827317dab8ff37835795e8738be888c3e01b08288ee
                 echo "\t\t\t<td>
 \t\t\t\t";
                 // line 50
-                if ((is_string($__internal_b0cbf671e7a47b2fe9ae1872615a7a0ba10dfbe1eedb4e5c26ea60b887f8e083 = $this->getAttribute($this->getAttribute((isset($context["planningArray"]) ? $context["planningArray"] : $this->getContext($context, "planningArray")), $context["i"], array(), "array"), $context["j"], array(), "array")) && is_string($__internal_0ccd25baa1922db459396aada04887fd50e76ec65bee96924bda2634c24225bb = "*") && ('' === $__internal_0ccd25baa1922db459396aada04887fd50e76ec65bee96924bda2634c24225bb || 0 === strpos($__internal_b0cbf671e7a47b2fe9ae1872615a7a0ba10dfbe1eedb4e5c26ea60b887f8e083, $__internal_0ccd25baa1922db459396aada04887fd50e76ec65bee96924bda2634c24225bb)))) {
+                if ((is_string($__internal_0d1fdeb3507db0e8f49fbc771e42b548f9fdb0728d92d45f45c49ffa38b231d0 = $this->getAttribute($this->getAttribute((isset($context["planningArray"]) ? $context["planningArray"] : $this->getContext($context, "planningArray")), $context["i"], array(), "array"), $context["j"], array(), "array")) && is_string($__internal_b825406a4504725461f149a767a04cd319cfe2775b92096bdc69311207766fad = "*") && ('' === $__internal_b825406a4504725461f149a767a04cd319cfe2775b92096bdc69311207766fad || 0 === strpos($__internal_0d1fdeb3507db0e8f49fbc771e42b548f9fdb0728d92d45f45c49ffa38b231d0, $__internal_b825406a4504725461f149a767a04cd319cfe2775b92096bdc69311207766fad)))) {
                     // line 51
                     echo "\t\t\t\t\t<a href=\"";
                     echo $this->env->getExtension('routing')->getPath("futur_planning_homepage");
